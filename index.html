@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick links</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: Verdana, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        nav .header {
+            background-color: #3c3cb4;
+            border: 1px solid #ffffff;
+            padding: 10px 0;
+            color: #ffffff;
+        }
+
+        nav .header p {
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        nav .menu {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 78px);
+            background-color: #3c3cb444;
+        }
+
+        nav .menu a {
+            border: 1px solid #ffffff44;
+            padding: 15px 5px;
+            color: #3c3cb4;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        nav .menu a:hover {
+            background-color: #3c3cb488;
+            color: #ffffff;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            margin-left: 250px;
+            padding: 0 20px;
+        }
+
+        main .title {
+            border-bottom: 1px solid #3c3cb4;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        main a {
+            border-radius: 5px;
+            padding: 20px 40px;
+            color: #3c3cb4;
+            text-decoration: none;
+        }
+
+        main a:hover {
+            background-color: #3c3cb422;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <p>Quick links</p>
+            <p>Cognitive & Analytics</p>
+        </div>
+        <div class="menu">
+            <a href="#an">Gestão de Analytics</a>
+            <a href="#pe">Gestão de pessoas</a>
+            <a href="#tp">Gestão de tempo</a>
+            <a href="#ta">Gestão de tempo (apoio)</a>
+            <a href="#pf">Performance</a>
+            <a href="#pr">Promoção</a>
+            <a href="#rh">RH</a>
+            <a href="#pj">Gestão de projetos</a>
+            <a href="#oo">Onboarding e offboarding</a>
+        </div>
+    </nav>
+    <main>
+        <div id="an" class="title">Gestão de Analytics</div>
+        <a href="https://ibm.ent.box.com/file/782666014014" target="_blank">Planilha com gerenciados</a>
+        <a href="https://trello.com/invite/b/iAyhmTlo/57dd995a75815334a7279f8d95d630b5/aloca%C3%A7%C3%A3o"
+            target="_blank">Xadrez das vagas de data scientist</a>
+        <a href="https://ibm.ent.box.com/file/693397256510" target="_blank">Candidatos entrevistados</a>
+        <a href="https://ibm.enterprise.slack.com/files/T39RVLBNW/F01R71T2CVB?origin_team=T39RVLBNW"
+            target="_blank">Estagiários</a>
+        <div id="pe" class="title">Gestão de pessoas</div>
+        <a href="https://w3.ibm.com/workday/" target="_blank">Workday</a>
+        <a href="https://yourlearning.ibm.com/yourcareeratibm/my-team" target="_blank">Your Career at IBM (PMR, tempo de
+            banda)</a>
+        <a href="https://yourlearning.ibm.com/#reports/menu/managers" target="_blank">Think40 - Relatório de
+            acompanhamento</a>
+        <a href="https://w3-01.ibm.com/services/americas/cvwizard/cv-wizard.nsf" target="_blank">CV Wizard</a>
+        <a href="https://w3.ibm.com/w3publisher/ibm-services-workforce-management/operational-references/taxonomy/shortlists"
+            target="_blank">Consultar JRS</a>
+        <a href="https://cv01a072.w3cloud.grpc.ibm.com:9443/IEWebClient/index.do" target="_blank">Alterar JRS</a>
+        <a href="https://w3-201.ibm.com/services/eamtlite/" target="_blank">eAMT - Gestão de ativos</a>
+        <div id="tp" class="title">Gestão de tempo</div>
+        <a href="https://secure.certponto.com.br/" target="_blank">Certponto - Marcação de pontos</a>
+        <a href="https://w3-bz.ieb.ibm.com/hr/etime" target="_blank">eTime - Claim</a>
+        <a href="https://labor-planning.dal1a.cirrus.ibm.com/" target="_blank">SD&I Labor Planning - Solicitação de
+            horas extras</a>
+        <a href="https://labor.sdi.br.ibm.com/labor-advisor" target="_blank">Labor Advisor - Conciliação de horas</a>
+        <a href="https://w3-01.ibm.com/services/tools/marketplace/security/acceptterms.jsp?deepLink=https%3A%2F%2Fw3-01.ibm.com%2Fservices%2Ftools%2Fmarketplace%2FfindaPract.wss%3Fnull"
+            target="_blank">Hours Plan - Planejamento de alocação</a>
+        <a href="https://w3.ibm.com/hr/adpglobalview" target="_blank">Global View - Agendamento de férias</a>
+        <a href="https://w3.ibm.com/tools/cio/forms/secure/org/app/f66b1610-06eb-4082-8d25-604aaa7a47b0/launch/index.html?form=F_Form1"
+            target="_blank">Remarcação de férias compulsórias</a>
+        <a href="https://w3.ibm.com/tools/cio/forms/secure/org/app/830f4fa4-6969-4dc0-80a5-d69bf7e0d523/launch/index.html?form=F_Form1"
+            target="_blank">Solicitar licenças</a>
+        <div id="ta" class="title">Gestão de tempo (apoio)</div>
+        <a href="https://w3.ibm.com/hr/web/br/erlr/calendario_de_feriados/" target="_blank">Calendário</a>
+        <a href="https://w3.ibm.com/w3publisher/controle-de-jornada-certponto/" target="_blank">Certponto - Material de
+            apoio</a>
+        <a href="https://w3.ibm.com/tools/cio/forms/secure/org/app/c44fb71f-da45-4558-83f8-6465c31ab3cb/launch/index.html?form=F_Form1"
+            target="_blank">Certponto - Requisição de novo relógio</a>
+        <a href="https://w3.ibm.com/hr/web/br/compensation/horas_extras/" target="_blank">Horas extras - Elegibilidade e
+            regras</a>
+        <a href="https://w3.ibm.com/hr/web/br/payroll/horas_extras_gerentes" target="_blank">Horas extras - Manual para
+            gerentes</a>
+        <div id="pf" class="title">Performance</div>
+        <a href="https://w3.ibm.com/hr/performance/checkpoint/" target="_blank">Checkpoint</a>
+        <a href="Https://ibmrr.performnet.com/ibmrr/login.do" target="_blank">Recognition Center (blue points, blue
+            thanks, eCards)</a>
+        <a href="https://talent-tool.wdc1a.cirrus.ibm.com/" target="_blank">Talent tool (9box)</a>
+        <div id="pr" class="title">Promoção</div>
+        <a href="http://ibm.biz/pinsights" target="_blank">Consultar 'Ready to be promoted'</a>
+        <a href="https://psm.eu-gb.mybluemix.net/index.html" target="_blank">Solicitar promoção (PSM)</a>
+        <div id="rh" class="title">RH</div>
+        <a href="https://w3.ibm.com/hr/askhr/home" target="_blank">AskHR </a>
+        <a href="https://w3-01.ibm.com/hr/web/br/navigation/alphabetical.html" target="_blank">RH de A à Z</a>
+        <div id="pj" class="title">Gestão de projetos</div>
+        <a href="https://ibmatlas.sugarondemand.com/" target="_blank">Atlas - Novas oportunidades</a>
+        <a href="https://w3-03.ibm.com/services/ippf/" target="_blank">IPPF</a>
+        <a href="https://engage-support.ibm.com/" target="_blank">Engage Support</a>
+        <a href="https://w3-01.ibm.com/tools/forms/ica/icaweb.nsf" target="_blank">ICA - Recursos internacionais</a>
+        <div id="oo" class="title">Onboarding e offboarding</div>
+        <a href="https://w3.ibm.com/hr/web/recruitment/gom/" target="_blank">GOM - Vagas internas globais</a>
+        <a href="https://w3.ibm.com/hr/web/br/separations/desligamentos_br/" target="_blank">Desligamento de
+            IBMistas</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+</body>
+
+</html>
