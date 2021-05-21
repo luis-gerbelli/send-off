@@ -34,13 +34,14 @@ nav .header p {
 nav .menu {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 78px);
+    height: calc(100vh - 51px);
     background-color: #3c3cb444;
+    overflow: auto;
 }
 
 nav .menu a {
     border: 1px solid #ffffff44;
-    padding: 15px 5px;
+    padding: 10px 5px;
     color: #3c3cb4;
     text-align: center;
     text-decoration: none;
@@ -60,17 +61,46 @@ main {
 
 main .title {
     border-bottom: 1px solid #3c3cb4;
-    padding: 20px;
+    padding: 15px;
     font-weight: bold;
 }
 
-main a {
+main .item {    
+    display: flex;
+    margin-top: 5px;
     border-radius: 5px;
-    padding: 20px 40px;
-    color: #3c3cb4;
-    text-decoration: none;
+    font-size: 12px;
 }
 
-main a:hover {
+main .item:hover {
     background-color: #3c3cb422;
+}
+
+main .item-key, main .item-value {
+    display: flex;
+}
+
+main .item-key div, main .item-value div {
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
+main .item-key div {
+    font-weight: bold;
+}
+
+main .item-key .larger, main .item-value .larger {
+    width: 200px;
+}
+
+main .item-picture img {
+    height: 46px;
+    margin-left: 10px;
+}
+
+main .item-note div {
+    margin-left: 10px;
+    text-align: left;
 }
