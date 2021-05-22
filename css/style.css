@@ -102,8 +102,10 @@ main .item-picture {
 }
 
 main .item-picture img {
+    width: 100px;
     height: 46px;
     margin-left: 10px;
+    object-fit: contain;
 }
 
 main .item-note div {
