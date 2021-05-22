@@ -95,6 +95,12 @@ main .item-key .larger, main .item-value .larger {
     width: 200px;
 }
 
+main .item-picture {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
 main .item-picture img {
     height: 46px;
     margin-left: 10px;
