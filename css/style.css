@@ -76,6 +76,16 @@ main .item:hover {
     background-color: #3c3cb422;
 }
 
+main .item.reservado {
+    background-color: rgb(128, 128, 128);
+    opacity: 0.4;
+}
+
+main .item.vendido {
+    background-color: rgb(128, 255, 128);
+    opacity: 0.5;
+}
+
 main .item-key, main .item-value {
     display: flex;
 }

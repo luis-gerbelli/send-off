@@ -12,7 +12,10 @@ function loadMain(file_json) {
   for (let room in file_json) {
     resp += '<div id="' + room + '" class="title">' + file_json[room]['RoomName'] + '</div>'
     for (let item in file_json[room]['Item']) {
-      resp += '<div class="item"><div class="item-info"><div class="item-key"><div>Código</div><div class="larger">Item</div><div>Quantidade</div><div>Altura</div><div>Largura</div><div>Profundidade</div><div>Objetivo</div></div><div class="item-value"><div>'
+      resp += '<div class="item'
+      if (file_json[room]['Item'][item]['Action'] === 'Reservado') resp += ' reservado'
+      if (file_json[room]['Item'][item]['Action'] === 'Vendido/Doado') resp += ' vendido'
+      resp += '"><div class="item-info"><div class="item-key"><div>Código</div><div class="larger">Item</div><div>Quantidade</div><div>Altura</div><div>Largura</div><div>Profundidade</div><div>Status</div></div><div class="item-value"><div>'
       resp += item
       resp += '</div><div class="larger">'
       resp += file_json[room]['Item'][item]['Name']
