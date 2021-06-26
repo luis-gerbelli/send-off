@@ -122,3 +122,8 @@ main .item-note div {
     margin-left: 10px;
     text-align: left;
 }
+
+@media only screen and (max-width: 600px) {
+    nav { visibility: hidden; }
+    main { margin-left: 0; }
+}
