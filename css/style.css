@@ -66,6 +66,7 @@ main {
     flex-direction: column;
     margin-left: 250px;
     padding: 0 20px;
+    width: 1300px;
 }
 
 main .title {
@@ -109,6 +110,10 @@ main .item-key div, main .item-value div {
     text-overflow: ellipsis;    
 }
 
+main .item-key div.larger, main .item-value div.larger {
+    width: 200px;
+}
+
 main .item-key div {
     font-weight: bold;
 }
@@ -128,7 +133,7 @@ main .item-picture img {
 
 main .item-note div {
     margin-left: 10px;
-    text-align: left;
+    text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;       
