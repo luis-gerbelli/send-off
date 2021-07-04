@@ -66,7 +66,7 @@ main {
     flex-direction: column;
     margin-left: 250px;
     padding: 0 20px;
-    width: 1300px;
+    width: 1080px;
 }
 
 main .title {
@@ -101,7 +101,7 @@ main .item-key, main .item-value {
 }
 
 main .item-key div, main .item-value div {
-    width: 100px;
+    width: 80px;
     height: 20px;
     padding: 5px;
     text-align: center;
@@ -111,7 +111,7 @@ main .item-key div, main .item-value div {
 }
 
 main .item-key div.larger, main .item-value div.larger {
-    width: 200px;
+    width: 160px;
 }
 
 main .item-key div {
@@ -121,11 +121,11 @@ main .item-key div {
 main .item-picture {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 80px;
 }
 
 main .item-picture img {
-    width: 100px;
+    width: 80px;
     height: 46px;
     margin-left: 10px;
     object-fit: contain;
