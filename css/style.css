@@ -9,13 +9,22 @@ body {
     font-family: Verdana, sans-serif;
 }
 
+.menu-bg {
+    background-color: #ffffff;
+    width: 250px;
+    height: calc(100vh - 51px);    
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
 nav {
     display: flex;
     flex-direction: column;
     width: 250px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav .header {
@@ -95,14 +104,13 @@ main .item-key div, main .item-value div {
     height: 20px;
     padding: 5px;
     text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;    
 }
 
 main .item-key div {
     font-weight: bold;
-}
-
-main .item-key .larger, main .item-value .larger {
-    width: 200px;
 }
 
 main .item-picture {
@@ -121,9 +129,13 @@ main .item-picture img {
 main .item-note div {
     margin-left: 10px;
     text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;       
 }
 
 @media only screen and (max-width: 600px) {
+    .menu-bg { visibility: hidden; }
     nav { visibility: hidden; }
     main { margin-left: 0; }
 }

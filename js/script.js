@@ -14,10 +14,12 @@ function loadMain(file_json) {
     for (let item in file_json[room]['Item']) {
       resp += '<div class="item'
       if (file_json[room]['Item'][item]['Action'] === 'Reservado') resp += ' reservado'
-      if (file_json[room]['Item'][item]['Action'] === 'Vendido/Doado') resp += ' vendido'
-      resp += '"><div class="item-info"><div class="item-key"><div>Código</div><div class="larger">Item</div><div>Quantidade</div><div>Altura</div><div>Largura</div><div>Profundidade</div><div>Status</div></div><div class="item-value"><div>'
-      resp += item
-      resp += '</div><div class="larger">'
+      if (file_json[room]['Item'][item]['Action'] === 'Vendido') resp += ' vendido'
+      resp += '"><div class="item-info"><div class="item-key"><div>Código</div><div>Item</div><div>Quantidade</div><div>Altura</div><div>Largura</div><div>Profund.</div><div>Status</div><div>Sugestão</div></div><div class="item-value"><div>'
+      resp += item.substring(3, 8)
+      resp += '</div><div title="'
+      resp += file_json[room]['Item'][item]['Name']
+      resp += '">'
       resp += file_json[room]['Item'][item]['Name']
       resp += '</div><div>'
       resp += file_json[room]['Item'][item]['Quantity']
@@ -32,6 +34,8 @@ function loadMain(file_json) {
       if (file_json[room]['Item'][item]['Depth'] !== '-') resp += 'cm'
       resp += '</div><div>'
       resp += file_json[room]['Item'][item]['Action']
+      resp += '</div><div>R$ '
+      resp += file_json[room]['Item'][item]['Price']      
       resp += '</div></div></div><div class="item-picture">'
       for (let p = Number(file_json[room]['Item'][item]['PictureMin']); p <= Number(file_json[room]['Item'][item]['PictureMax']); p++) {
         resp += '<a href="./img/picture/'
@@ -40,7 +44,9 @@ function loadMain(file_json) {
         resp += item + '_' + p
         resp += '.JPG"></a>'
       }
-      resp += '</div><div class="item-note"><div class="item-key"><div class="larger">Avaria</div></div><div class="item-value"><div class="larger">'
+      resp += '</div><div class="item-note"><div class="item-key"><div>Avaria</div></div><div class="item-value"><div title="'
+      resp += file_json[room]['Item'][item]['Damage']
+      resp += '">'
       resp += file_json[room]['Item'][item]['Damage']
       resp += '</div></div></div></div>'
     }
