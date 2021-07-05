@@ -1,3 +1,5 @@
+/* Set up initial page */
+
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
@@ -55,4 +57,25 @@ function loadMain(file_json) {
   }
   for (let i = 0; i < 32; i++) resp += "<br>"
   document.getElementById('main').innerHTML = resp
+}
+
+/* Set up filters */
+
+document.querySelector("#show-item").addEventListener("click", showAvailableItem)
+document.querySelector("#hide-item").addEventListener("click", hideAvailableItem)
+
+function showAvailableItem(ev) {
+  ev.stopPropagation()
+  document.querySelector("#show-item").classList.add("active")
+  document.querySelector("#hide-item").classList.remove("active")
+  ;[...document.querySelectorAll("main .item.vendido")].forEach(el => { el.classList.remove("hidden") })
+  ;[...document.querySelectorAll("main .item.reservado")].forEach(el => { el.classList.remove("hidden") })
+}
+
+function hideAvailableItem(ev) {
+  ev.stopPropagation()
+  document.querySelector("#show-item").classList.remove("active")
+  document.querySelector("#hide-item").classList.add("active")
+  ;[...document.querySelectorAll("main .item.vendido")].forEach(el => { el.classList.add("hidden") })
+  ;[...document.querySelectorAll("main .item.reservado")].forEach(el => { el.classList.add("hidden") })
 }

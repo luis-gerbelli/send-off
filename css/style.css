@@ -12,7 +12,7 @@ body {
 .menu-bg {
     background-color: #ffffff;
     width: 250px;
-    height: calc(100vh - 51px);    
+    height: calc(100vh - 122px);    
     position: fixed;
     top: 0;
     z-index: 1;
@@ -40,10 +40,33 @@ nav .header p {
     font-weight: bold;
 }
 
+nav .header div.menu-option {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+nav .header div.menu-option.active {
+    background: #ffffff;
+    color: #3c3cb4;
+}
+
+nav .header div.menu-option:hover {
+    cursor: pointer;
+}
+
+nav .header div.menu-option:not(.active):hover {
+    background-color: #ffffff44;
+    cursor: pointer;
+}
+
 nav .menu {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 51px);
+    height: calc(100vh - 122px);
     background-color: #3c3cb444;
     overflow: auto;
 }
@@ -80,6 +103,10 @@ main .item {
     margin-top: 5px;
     border-radius: 5px;
     font-size: 12px;
+}
+
+main .item.hidden {    
+    display: none;
 }
 
 main .item:hover {
