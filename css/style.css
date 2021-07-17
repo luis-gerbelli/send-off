@@ -118,7 +118,7 @@ main .item.reservado {
     opacity: 0.4;
 }
 
-main .item.vendido {
+main .item.entregue {
     background-color: rgb(128, 255, 128);
     opacity: 0.5;
 }

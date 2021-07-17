@@ -16,7 +16,7 @@ function loadMain(file_json) {
     for (let item in file_json[room]['Item']) {
       resp += '<div class="item'
       if (file_json[room]['Item'][item]['Action'] === 'Reservado') resp += ' reservado'
-      if (file_json[room]['Item'][item]['Action'] === 'Vendido') resp += ' vendido'
+      if (file_json[room]['Item'][item]['Action'] === 'Entregue') resp += ' entregue'
       resp += '"><div class="item-info"><div class="item-key"><div>Código</div><div class="larger">Item</div><div>Status</div><div>Disponib.</div><div>Sugestão</div></div><div class="item-value"><div>'
       resp += item.substring(3, 8)
       resp += '</div><div  class="larger" title="'
@@ -68,7 +68,7 @@ function showAvailableItem(ev) {
   ev.stopPropagation()
   document.querySelector("#show-item").classList.add("active")
   document.querySelector("#hide-item").classList.remove("active")
-  ;[...document.querySelectorAll("main .item.vendido")].forEach(el => { el.classList.remove("hidden") })
+  ;[...document.querySelectorAll("main .item.entregue")].forEach(el => { el.classList.remove("hidden") })
   ;[...document.querySelectorAll("main .item.reservado")].forEach(el => { el.classList.remove("hidden") })
 }
 
@@ -76,6 +76,6 @@ function hideAvailableItem(ev) {
   ev.stopPropagation()
   document.querySelector("#show-item").classList.remove("active")
   document.querySelector("#hide-item").classList.add("active")
-  ;[...document.querySelectorAll("main .item.vendido")].forEach(el => { el.classList.add("hidden") })
+  ;[...document.querySelectorAll("main .item.entregue")].forEach(el => { el.classList.add("hidden") })
   ;[...document.querySelectorAll("main .item.reservado")].forEach(el => { el.classList.add("hidden") })
 }
